@@ -17,12 +17,19 @@
     </header>
 
     <main class="container">
+        <div id="word-board" class="border"></div>
         <div id="typing-area">
-            <div class="word active">one</div>
-            <div class="word">two</div>
+            <input type="text" class="form-control" id="input" autocomplete="off" autocapitalize="off" autocorrent="off" onkeypress="pressKey(event);">
+        </div>
+        <div id="buttons">
+            <button type="button" class="btn btn-danger">Mode</button>
+            <button type="button" class="btn btn-primary" onclick="reset_words()">Reset</button>
+            <button type="button" class="btn btn-warning">Time</button>
         </div>
     </main>
 
     <footer></footer>
+    
+    <script type="text/javascript" src="../scripts/home.js"></script>
 </body>
 </html>

@@ -1,0 +1,40 @@
+#word-board { 
+    width: 60%;
+    height: 75px;
+    margin: auto;
+    margin-bottom: 25px;
+    overflow: hidden;
+}
+
+#typing-area {
+    width: 60%;
+    margin: auto;
+    margin-bottom: 25px;
+}
+
+#buttons {
+    width: 60%;
+    margin: auto;
+
+}
+
+#buttons button {
+    margin: auto;
+}
+
+.corrected {
+    color: green;
+}
+
+.typo {
+    color:red;
+}
+
+.word {
+    margin: 5px;
+    display: inline-flex;
+}
+
+.active {
+    background-color: lightgray;
+}
