@@ -1,38 +1,64 @@
+body {
+    background-image: url('../images/background/Snow.gif');
+    background-repeat: no-repeat;
+    background-attachment: fixed; 
+    background-size: cover;
+}
+
+.container > div {
+    width: 55%;
+    display: block;
+}
+
 #word-board { 
-    width: 60%;
     height: 75px;
     margin: auto;
     margin-bottom: 25px;
     overflow: hidden;
 }
 
+
 #typing-area {
-    width: 60%;
+    width: 40%;
     margin: auto;
     margin-bottom: 25px;
 }
 
-#buttons {
-    width: 60%;
+#controllers {
     margin: auto;
-
+    margin-bottom: 30px;
 }
 
-#buttons button {
-    margin: auto;
+#controllers button {
+    margin: 10px;
 }
 
 .corrected {
     color: green;
 }
 
-.typo {
+.incorrected {
     color:red;
 }
 
 .word {
     margin: 5px;
     display: inline-flex;
+}
+
+.active-word {
+    background-color: lightgray;
+}
+
+#summary {
+    max-width: 30%;
+    margin: auto;
+    border-radius: 0;
+}
+
+#lineChart canvas{
+    max-height: 250px;
+    max-width: 100%;
 }
 
 .active {

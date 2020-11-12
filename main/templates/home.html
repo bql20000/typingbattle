@@ -8,6 +8,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
     <title>Typing Battle</title>
 </head>
 <body>
@@ -17,19 +18,90 @@
     </header>
 
     <main class="container">
-        <div id="word-board" class="border"></div>
+        <!-- Typing area -->
+        <div id="word-board"></div>
         <div id="typing-area">
-            <input type="text" class="form-control" id="input" autocomplete="off" autocapitalize="off" autocorrent="off" onkeypress="pressKey(event);">
+            <input type="text" class="form-control" id="input" placeholder="Countdown starts when you begin to type!" 
+            autocomplete="off" autocapitalize="off" autocorrent="off" onkeypress="pressKey(event, this);">
         </div>
-        <div id="buttons">
-            <button type="button" class="btn btn-danger">Mode</button>
-            <button type="button" class="btn btn-primary" onclick="reset_words()">Reset</button>
-            <button type="button" class="btn btn-warning">Time</button>
+
+        <!-- Controlling buttons -->
+        <div id="controllers" class="d-flex justify-content-center">
+            <button type="button" class="btn btn-danger">Mode</button> 
+            <button type="button" class="btn btn-primary" onclick="reset()">Restart</button>
+            <div class="btn-group" role="group">
+                <button id="btnGroupDrop1" type="button" class="btn btn-warning dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Time (s)
+                </button>
+                <div class="dropdown-menu" aria-labelledby="btnGroupDrop1">
+                    <a class="dropdown-item" href="#" onclick="setTime(this)">15</a>
+                    <a class="dropdown-item" href="#" onclick="setTime(this)">30</a>
+                    <a class="dropdown-item" href="#" onclick="setTime(this)">60</a>
+                </div>
+            </div>
+
+            <div class="btn-group" role="group">
+                <button id="btnGroupDrop2" type="button" class="btn btn-dark dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Theme
+                </button>
+                <div class="dropdown-menu" aria-labelledby="btnGroupDrop2">
+                    <a class="dropdown-item" href="#" onclick="setBackground(this)">Covid-19</a>
+                    <a class="dropdown-item" href="#" onclick="setBackground(this)">Snow</a> <!-- jquery or JS ???-->
+                    <a class="dropdown-item" href="#" onclick="setBackground(this)">Rain</a>
+                    <a class="dropdown-item" href="#" onclick="setBackground(this)">Galaxy</a>
+                </div>
+            </div>
         </div>
+        
+
+        <!-- Summary card -->
+        <div id="summary" class="card chart-card border-success border-bottom-0">
+
+            <!-- Content -->
+            <div class="card-body pb-0 ">
+                <h4 class="card-title font-weight-bold text-justify text-center">Summary</h4>
+                <div>
+                    <p class="display-5 ali gn-self-end">Words per minute: <span id="wpm" class="badge badge-success"></span></p>
+                    <p class="display-5 align-self-end">Accuracy: <span id="accuracy" class="badge badge-info"></span></p>
+                </div>
+            </div>
+
+            <!-- Tabs -->
+            <div class="classc-tabs">
+                <!-- Nav tabs -->
+                <ul class="nav tabs-white nav-fill" role="tablist">
+                    <li class="nav-item ml-0">
+                    <a class="nav-link waves-light font-weight-bold border-bottom border-success" data-toggle="tab" href="#panel1" role="tab">Status</a>
+                    </li>
+                    <li class="nav-item">
+                    <a class="nav-link waves-light font-weight-bold border-bottom border-success" data-toggle="tab" href="#panel2" role="tab">Missed words</a>
+                    </li>
+                </ul>
+
+                <div class="tab-content rounded-bottom bg-white">
+                    <!--Panel 1-->
+                    <div class="tab-pane fade in show highlight" id="panel1" role="tabpanel">
+                      <div id="lineChart"></div>
+                    </div>
+                    <!--/.Panel 1-->
+
+                    <!--Panel 2-->
+                    <div class="tab-pane fade align-items-stretch" id="panel2" role="tabpanel">
+                    </div>
+                    <!--/.Panel 2-->
+            
+                  </div>
+            </div>
+        </div>
+      
+
     </main>
 
-    <footer></footer>
-    
-    <script type="text/javascript" src="../scripts/home.js"></script>
+    <foote></footer>
+
+    <script type="text/javascript" src="../scripts/word.js"></script>
+    <script type="text/javascript" src="../scripts/time.js"></script>
+    <script type="text/javascript" src="../scripts/results.js"></script>
+    <script type="text/javascript" src="../scripts/theme.js"></script>
 </body>
 </html>

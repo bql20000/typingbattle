@@ -3,7 +3,7 @@ function statisticize() {
     let incorrected = document.getElementsByClassName('incorrected').length;
 
     let words_per_min = (corrected + incorrected) * 60 / (prev_time_limit - time_limit);
-    let accuracy = (corrected + incorrected > 0) ? (corrected / (corrected + incorrected) * 100) : 0;
+    let accuracy = (corrected + incorrected > 0) ? (corrected / (corrected + incorrected) * 100) : 100;
 
     document.getElementById('wpm').innerHTML = `${words_per_min.toFixed(0)}`;
     document.getElementById('accuracy').innerHTML = `${accuracy.toFixed(1)}%`;
@@ -26,7 +26,7 @@ function statisticize() {
         let p = document.createElement('p');
         let content = document.createTextNode('All corrected, good job!');
         p.appendChild(content);
-        p.classList.add('text-success', 'text-center');
+        p.classList.add('text-success', 'text-center', 'bg-white');
         panel2.appendChild(p);
     }
 

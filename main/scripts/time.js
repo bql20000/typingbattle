@@ -40,7 +40,7 @@ function calculate() {
     let incorrected = document.getElementsByClassName('incorrected').length;
 
     let words_per_min = (corrected + incorrected) * 60 / (prev_time_limit - time_limit);
-    let accuracy = (corrected + incorrected > 0) ? (corrected / (corrected + incorrected) * 100) : 0;
+    let accuracy = (corrected + incorrected > 0) ? (corrected / (corrected + incorrected) * 100) : 100;
 
     wpmData.push({x: prev_time_limit - time_limit, y: words_per_min});
     accData.push({x: prev_time_limit - time_limit, y: accuracy});
