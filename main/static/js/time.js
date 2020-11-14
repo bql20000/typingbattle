@@ -8,10 +8,15 @@ function setTime(self) {
     reset();
 }   
 
-function resetTimeLimit() {
+function clearIntervals() {
     clearInterval(timer);
+    clearInterval(statisticizer);
+}
+
+function resetTimeLimit() {
+    clearIntervals();
     time_limit = prev_time_limit;
-    document.getElementById("btnGroupDrop1").innerHTML = time_limit;
+    document.getElementById("time-button").innerHTML = time_limit;
 }
 
 let timer;
@@ -27,10 +32,9 @@ function startTiming() {
 }
 
 function counting() {
-    document.getElementById("btnGroupDrop1").innerHTML = --time_limit;
+    document.getElementById("time-button").innerHTML = --time_limit;
     if (time_limit == 0) {
-        clearInterval(timer);
-        clearInterval(statisticizer);
+        clearIntervals();
         showResults();
     }
 }

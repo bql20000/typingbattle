@@ -1,16 +1,14 @@
-const localhost = 'http:/127.0.0.1:5000'
-
-let collection_size = 200;
-let collection = [];
-let num_words = 300;
-let words = [];
-let cur = 0;
+let collection = [];    // list of strings representing words
+let words = [];         // list of span elements representing words
+let cur = 0;            // index of current word
 
 function rand(min, max) {
+    // random int in [min:max] (both inclusive)
     return Math.floor(Math.random() * (max - min) ) + min;
 }
 
 function lastInLine(word) {
+    // If the current word reaches the end of the container, clear current line
     let cur_right = word.getBoundingClientRect().right;
     let next_right = word.nextSibling.getBoundingClientRect().right;
     return cur_right > next_right;
@@ -30,6 +28,9 @@ function pressKey(event, self) {
 
         // change color of words
         words[cur].classList.remove('active-word');
+        console.log(cur_input);
+        console.log(words[cur].innerHTML);
+        console.log(String(cur_input) == String(words[cur].innerHTML));
         if (cur_input == words[cur].innerHTML) {
             words[cur].classList.add('corrected');
         }
@@ -48,6 +49,7 @@ function pressKey(event, self) {
 }
 
 function clearWords() {
+    // remove all span elements representing words
     let cur_words = Array.from(document.getElementsByClassName('word'));
     cur_words.forEach(element => {
         element.remove();
@@ -56,17 +58,19 @@ function clearWords() {
     cur = 0;
 }
 
-async function getCollection(num) {
-    url = localhost + '/words?size=' + `${num}`;
+async function getCollection(mode) {
+    // get 300 shuffled words based on chosen game mode
+    url = '/words?mode=' + `${mode}`;
     let response = await fetch(url);
     return response.json();
 }
 
 function generateWords() {
+    // generate span elements from collection of words received from server
     let board = document.getElementById('word-board');
-    for (let i = 0; i < num_words; ++i) {
+    for (let i = 0; i < collection.length; ++i) {
         let w = document.createElement('span');
-        let content = document.createTextNode(collection[rand(0, collection_size-1)]);
+        let content = document.createTextNode(collection[i]);
         w.appendChild(content);
         w.classList.add('word');
         board.appendChild(w);
@@ -77,7 +81,7 @@ function generateWords() {
 
 async function resetWords() {
     clearWords();
-    collection = await getCollection(collection_size);
+    collection = await getCollection(mode);
     generateWords();
 }
 

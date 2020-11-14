@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../static/home.css">
+    <link rel="stylesheet" href="static/css/home.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
@@ -27,13 +27,22 @@
 
         <!-- Controlling buttons -->
         <div id="controllers" class="d-flex justify-content-center">
-            <button type="button" class="btn btn-danger">Mode</button> 
+            <div class="btn-group" role="group">
+                <button id="mode-button" type="button" class="btn btn-danger dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Mode
+                </button>
+                <div class="dropdown-menu" aria-labelledby="mode-button">
+                    <a class="dropdown-item" href="#" onclick="setMode(this)">White Collar</a>
+                    <a class="dropdown-item" href="#" onclick="setMode(this)">Scientist</a>
+                    <a class="dropdown-item" href="#" onclick="setMode(this)">Psychologist</a>
+                </div>
+            </div>
             <button type="button" class="btn btn-primary" onclick="reset()">Restart</button>
             <div class="btn-group" role="group">
-                <button id="btnGroupDrop1" type="button" class="btn btn-warning dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <button id="time-button" type="button" class="btn btn-warning dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Time (s)
                 </button>
-                <div class="dropdown-menu" aria-labelledby="btnGroupDrop1">
+                <div class="dropdown-menu" aria-labelledby="time-button">
                     <a class="dropdown-item" href="#" onclick="setTime(this)">15</a>
                     <a class="dropdown-item" href="#" onclick="setTime(this)">30</a>
                     <a class="dropdown-item" href="#" onclick="setTime(this)">60</a>
@@ -41,14 +50,15 @@
             </div>
 
             <div class="btn-group" role="group">
-                <button id="btnGroupDrop2" type="button" class="btn btn-dark dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <button id="theme-button" type="button" class="btn btn-dark dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Theme
                 </button>
-                <div class="dropdown-menu" aria-labelledby="btnGroupDrop2">
+                <div class="dropdown-menu" aria-labelledby="theme-button">
                     <a class="dropdown-item" href="#" onclick="setBackground(this)">Covid-19</a>
                     <a class="dropdown-item" href="#" onclick="setBackground(this)">Snow</a> <!-- jquery or JS ???-->
                     <a class="dropdown-item" href="#" onclick="setBackground(this)">Rain</a>
                     <a class="dropdown-item" href="#" onclick="setBackground(this)">Galaxy</a>
+                    <a class="dropdown-item" href="#" onclick="setBackground(this)">No theme</a>
                 </div>
             </div>
         </div>
@@ -97,11 +107,12 @@
 
     </main>
 
-    <foote></footer>
+    <footer></footer>
 
-    <script type="text/javascript" src="../scripts/word.js"></script>
-    <script type="text/javascript" src="../scripts/time.js"></script>
-    <script type="text/javascript" src="../scripts/results.js"></script>
-    <script type="text/javascript" src="../scripts/theme.js"></script>
+    <script type="text/javascript" src="static/js/word.js"></script>
+    <script type="text/javascript" src="static/js/time.js"></script>
+    <script type="text/javascript" src="static/js/results.js"></script>
+    <script type="text/javascript" src="static/js/theme.js"></script>
+    <script type="text/javascript" src="static/js/mode.js"></script>
 </body>
 </html>
