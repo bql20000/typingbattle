@@ -28,7 +28,7 @@ function startTiming() {
     timer = setInterval(counting, 1000);
     wpmData = [];
     accData = [];
-    statisticizer = setInterval(calculate, 1000*(prev_time_limit/10));
+    statisticizer = setInterval(calculateStep, 1000*(prev_time_limit/10));
 }
 
 function counting() {
@@ -36,16 +36,12 @@ function counting() {
     if (time_limit == 0) {
         clearIntervals();
         showResults();
+        saveResultsToDB();
     }
 }
 
-function calculate() {
-    let corrected = document.getElementsByClassName('corrected').length;
-    let incorrected = document.getElementsByClassName('incorrected').length;
-
-    let words_per_min = (corrected + incorrected) * 60 / (prev_time_limit - time_limit);
-    let accuracy = (corrected + incorrected > 0) ? (corrected / (corrected + incorrected) * 100) : 100;
-
-    wpmData.push({x: prev_time_limit - time_limit, y: words_per_min});
-    accData.push({x: prev_time_limit - time_limit, y: accuracy});
+function calculateStep() {
+    let result = composeResult();
+    wpmData.push({x: prev_time_limit - time_limit, y: result.wpm});
+    accData.push({x: prev_time_limit - time_limit, y: result.accuracy});
 }

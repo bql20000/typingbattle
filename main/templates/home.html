@@ -3,107 +3,319 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="static/css/all.css">
+    <link rel="stylesheet" href="static/css/bootstrap/bootstrap.min.css">
     <link rel="stylesheet" href="static/css/home.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    <script type="text/javascript" src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+    <script src="static/js/jquery/jquery.min.js"></script>
+    <!-- <script src="static/js/popper/popper.min.js"></script> -->
+    <script src="static/js/bootstrap/bootstrap.bundle.min.js"></script>
+    <script src="static/js/canvasjs.min.js"></script>
     <title>Typing Battle</title>
 </head>
 <body>
-    <header class="container-fuild p-3 mb-3 bg-dark text-white">
-        <h1>Typing Battle</h1>
-        <p>Where keyboard cleaning kits are redundant.</p>
-    </header>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+          <a class="navbar-brand" href="#">Typing Battle</a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
 
-    <main class="container">
-        <!-- Typing area -->
-        <div id="word-board"></div>
-        <div id="typing-area">
-            <input type="text" class="form-control" id="input" placeholder="Countdown starts when you begin to type!" 
-            autocomplete="off" autocapitalize="off" autocorrent="off" onkeypress="pressKey(event, this);">
+          <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item active-nav" id="nav-home" name="home">
+                    <a class="nav-link" href="#">Home</a>
+                </li>
+                <li class="nav-item" id="nav-scoreboard" name="scoreboard">
+                    <a class="nav-link" href="#">Scoreboard</a>
+                </li>
+                <li class="nav-item" id="nav-shopping" name="shopping">
+                    <a class="nav-link" href="#">Shopping</a>
+                </li>
+                <li class="nav-item" id="nav-account" name="account">
+                    <a class="nav-link" href="#">My account</a>
+                </li>
+            </ul>
+          </div>
+
         </div>
+    </nav>
 
-        <!-- Controlling buttons -->
-        <div id="controllers" class="d-flex justify-content-center">
-            <div class="btn-group" role="group">
-                <button id="mode-button" type="button" class="btn btn-danger dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Mode
-                </button>
-                <div class="dropdown-menu" aria-labelledby="mode-button">
-                    <a class="dropdown-item" href="#" onclick="setMode(this)">White Collar</a>
-                    <a class="dropdown-item" href="#" onclick="setMode(this)">Scientist</a>
-                    <a class="dropdown-item" href="#" onclick="setMode(this)">Psychologist</a>
+    <div class="modal fade" id="enrollModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+
+                <div class="modal-header border-bottom-0">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                    </button>
                 </div>
-            </div>
-            <button type="button" class="btn btn-primary" onclick="reset()">Restart</button>
-            <div class="btn-group" role="group">
-                <button id="time-button" type="button" class="btn btn-warning dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Time (s)
-                </button>
-                <div class="dropdown-menu" aria-labelledby="time-button">
-                    <a class="dropdown-item" href="#" onclick="setTime(this)">15</a>
-                    <a class="dropdown-item" href="#" onclick="setTime(this)">30</a>
-                    <a class="dropdown-item" href="#" onclick="setTime(this)">60</a>
-                </div>
-            </div>
 
-            <div class="btn-group" role="group">
-                <button id="theme-button" type="button" class="btn btn-dark dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Theme
-                </button>
-                <div class="dropdown-menu" aria-labelledby="theme-button">
-                    <a class="dropdown-item" href="#" onclick="setBackground(this)">Covid-19</a>
-                    <a class="dropdown-item" href="#" onclick="setBackground(this)">Snow</a> <!-- jquery or JS ???-->
-                    <a class="dropdown-item" href="#" onclick="setBackground(this)">Rain</a>
-                    <a class="dropdown-item" href="#" onclick="setBackground(this)">Galaxy</a>
-                    <a class="dropdown-item" href="#" onclick="setBackground(this)">No theme</a>
-                </div>
-            </div>
-        </div>
-        
-
-        <!-- Summary card -->
-        <div id="summary" class="card chart-card border-success border-bottom-0">
-
-            <!-- Content -->
-            <div class="card-body pb-0 ">
-                <h4 class="card-title font-weight-bold text-justify text-center">Summary</h4>
-                <div>
-                    <p class="display-5 ali gn-self-end">Words per minute: <span id="wpm" class="badge badge-success"></span></p>
-                    <p class="display-5 align-self-end">Accuracy: <span id="accuracy" class="badge badge-info"></span></p>
-                </div>
-            </div>
-
-            <!-- Tabs -->
-            <div class="classc-tabs">
-                <!-- Nav tabs -->
-                <ul class="nav tabs-white nav-fill" role="tablist">
-                    <li class="nav-item ml-0">
-                    <a class="nav-link waves-light font-weight-bold border-bottom border-success" data-toggle="tab" href="#panel1" role="tab">Status</a>
-                    </li>
-                    <li class="nav-item">
-                    <a class="nav-link waves-light font-weight-bold border-bottom border-success" data-toggle="tab" href="#panel2" role="tab">Missed words</a>
-                    </li>
-                </ul>
-
-                <div class="tab-content rounded-bottom bg-white">
-                    <!--Panel 1-->
-                    <div class="tab-pane fade in show highlight" id="panel1" role="tabpanel">
-                      <div id="lineChart"></div>
+                <div class="modal-body">
+                    <div class="form-title text-center">
+                        <h4><i class="far fa-user mr-1"></i>Account</h4>
                     </div>
-                    <!--/.Panel 1-->
-
-                    <!--Panel 2-->
-                    <div class="tab-pane fade align-items-stretch" id="panel2" role="tabpanel">
+                    <div id="error-message" class="text-center pb-2 font-italic d-none"></div>
+                    <div class="d-flex flex-column text-center">
+                        <form>
+                            <div class="form-group">
+                                <input type="text" class="form-control" id="username" placeholder="Your username...">
+                            </div>
+                            <div id="username-error-message" class="pb-2 text-danger font-weight-bold d-none"></div>
+                            <div class="form-group">
+                                <input type="password" class="form-control" id="password" placeholder="Your password...">
+                            </div>
+                            <div id="password-error-message" class="pb-2 text-danger font-weight-bold d-none"></div>
+                            <div id="enroll-buttons" class="row d-flex justify-content-center mx-0">
+                                <div class="col-sm-6 mx-0 p-1"><button type="button" class="btn btn-info btn-round" onclick="login();">Login</button></div>
+                                <div class="col-sm-6 mx-0 p-1"><button type="button" class="btn btn-info btn-round" onclick="register();">Register</button></div>
+                            </div> 
+                        </form>
                     </div>
-                    <!--/.Panel 2-->
+                </div>
+
+                <div class="modal-footer d-flex justify-content-center">
+                    <div class="signup-section">Forgot password? <a href="#" class="text-info"> Reset now</a>.</div>
+                </div>
+
+            </div>
             
-                  </div>
+        </div>
+    </div>
+    
+      
+
+    <main class="container mt-3">
+        <div class="sec" id="sec-home">
+            <!-- Typing area -->
+            <div id="word-board"></div>
+            <div id="typing-area">
+                <input type="text" class="form-control" id="input" placeholder="Countdown starts when you begin to type!" 
+                autocomplete="off" autocapitalize="off" autocorrent="off" onkeypress="pressKey(event, this);">
             </div>
+
+            <!-- Controlling buttons -->
+            <div id="controllers" class="row">
+                <div class="col-md-3 d-flex justify-content-center">
+                    <div class="btn-group" role="group">
+                        <button id="mode-button" type="button" class="btn btn-danger dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Mode
+                        </button>
+                        <div class="dropdown-menu" aria-labelledby="mode-button">
+                            <a class="dropdown-item" href="#" onclick="setMode(this)">White Collar</a>
+                            <a class="dropdown-item" href="#" onclick="setMode(this)">Scientist</a>
+                            <a class="dropdown-item" href="#" onclick="setMode(this)">Psychologist</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-3 d-flex justify-content-center">
+                    <button type="button" class="btn btn-primary" onclick="reset()">Restart</button>
+                </div>
+
+                <div class="col-md-3 d-flex justify-content-center">
+                    <div class="btn-group" role="group">
+                        <button id="time-button" type="button" class="btn btn-warning dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Time (s)
+                        </button>
+                        <div class="dropdown-menu" aria-labelledby="time-button">
+                            <a class="dropdown-item" href="#" onclick="setTime(this)">15</a>
+                            <a class="dropdown-item" href="#" onclick="setTime(this)">30</a>
+                            <a class="dropdown-item" href="#" onclick="setTime(this)">60</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-3 d-flex justify-content-center">
+                    <div class="btn-group" role="group">
+                        <button id="theme-button" type="button" class="btn btn-dark dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Theme
+                        </button>
+                        <div class="dropdown-menu" aria-labelledby="theme-button">
+                            <a class="dropdown-item" href="#" onclick="setBackground(this)">Covid-19</a>
+                            <a class="dropdown-item" href="#" onclick="setBackground(this)">Snow</a> <!-- jquery or JS ???-->
+                            <a class="dropdown-item" href="#" onclick="setBackground(this)">Rain</a>
+                            <a class="dropdown-item" href="#" onclick="setBackground(this)">Galaxy</a>
+                            <a class="dropdown-item" href="#" onclick="setBackground(this)">No theme</a>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+            
+
+            <!-- Summary card -->
+            <div id="summary" class="card chart-card border-success border-bottom-0">
+
+                <!-- Content -->
+                <div class="card-body pb-0 ">
+                    <h4 class="card-title font-weight-bold text-justify text-center">Summary</h4>
+                    <div>
+                        <p class="display-5 ali gn-self-end">Words per minute: <span id="wpm" class="badge badge-success"></span></p>
+                        <p class="display-5 align-self-end">Accuracy: <span id="accuracy" class="badge badge-info"></span></p>
+                    </div>
+                </div>
+
+                <!-- Tabs -->
+                <div class="classc-tabs">
+                    <!-- Nav tabs -->
+                    <ul class="nav tabs-white nav-fill" role="tablist">
+                        <li class="nav-item ml-0">
+                        <a class="nav-link waves-light font-weight-bold border-bottom border-success" data-toggle="tab" href="#panel1" role="tab">Status</a>
+                        </li>
+                        <li class="nav-item">
+                        <a class="nav-link waves-light font-weight-bold border-bottom border-success" data-toggle="tab" href="#panel2" role="tab">Missed words</a>
+                        </li>
+                    </ul>
+
+                    <div class="tab-content rounded-bottom bg-white">
+                        <!--Panel 1-->
+                        <div class="tab-pane fade in show highlight" id="panel1" role="tabpanel">
+                        <div id="lineChart"></div>
+                        </div>
+                        <!--/.Panel 1-->
+
+                        <!--Panel 2-->
+                        <div class="tab-pane fade align-items-stretch" id="panel2" role="tabpanel">
+                        </div>
+                        <!--/.Panel 2-->
+                
+                    </div>
+                </div>
+            </div>
+
         </div>
       
+        <div class="sec" id="sec-scoreboard">
+        </div>
+
+        <div class="sec" id="sec-shopping">
+            <div id="carouselIndicators" class="carousel slide mb-5" data-ride="carousel">
+                <ol class="carousel-indicators">
+                  <li data-target="#carouselIndicators" data-slide-to="0" class="active"></li>
+                  <li data-target="#carouselIndicators" data-slide-to="1"></li>
+                  <li data-target="#carouselIndicators" data-slide-to="2"></li>
+                </ol>
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <img class="d-block w-100" src="../static/img/shopee-sale-2.jpeg" alt="First slide">
+                  </div>
+                  <div class="carousel-item">
+                    <img class="d-block w-100" src="../static/img/shopee-sale-2.jpeg" alt="Second slide">
+                  </div>
+                  <div class="carousel-item">
+                    <img class="d-block w-100" src="../static/img/lazada-sale.jpg" alt="Third slide">
+                  </div>
+                </div>
+                <a class="carousel-control-prev" href="#carouselIndicators" role="button" data-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="sr-only">Previous</span>
+                </a>
+                <a class="carousel-control-next" href="#carouselIndicators" role="button" data-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="sr-only">Next</span>
+                </a>
+            </div>
+
+            <div class="row row-cols-1 row-cols-sm-1 row-cols-md-1 row-cols-lg-2 row-cols-xl-3">
+                <div class="col mb-4">
+                  <div class="card">
+                    <img src="https://dummyimage.com/600x400/000/fff.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title">Card title</h5>
+                      <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col mb-4">
+                  <div class="card">
+                    <img src="https://dummyimage.com/600x400/000/fff.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title">Card title</h5>
+                      <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col mb-4">
+                  <div class="card">
+                    <img src="https://dummyimage.com/600x400/000/fff.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title">Card title</h5>
+                      <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content.</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col mb-4">
+                  <div class="card">
+                    <img src="https://dummyimage.com/600x400/000/fff.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title">Card title</h5>
+                      <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col mb-4">
+                  <div class="card">
+                    <img src="https://dummyimage.com/600x400/000/fff.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title">Card title</h5>
+                      <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col mb-4">
+                  <div class="card">
+                    <img src="https://dummyimage.com/600x400/000/fff.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title">Card title</h5>
+                      <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                    </div>
+                  </div>
+                </div>
+                
+                
+                
+              </div>
+        </div>
+
+        <div class="sec" id="sec-account">
+            <div class="card mx-auto" id="profile-card">
+                <div class="card-header justify-content-center d-flex">
+                    <img class="card-img-top p-3" src="/static/img/user.png" alt="Avatar">
+                </div>
+                <div class="card-body">
+                    <h3 id="username-in-card" class="card-title text-center">USERNAME</h3>
+                    <br>
+                    <div class="d-flex">
+                        <p>Time practiced</p>                      
+                        <span id="time-practiced" class="badge badge-warning"></span>
+                    </div>
+                    <div class="d-flex">
+                        <p>Overall wpm</p>                     
+                        <span id="overall-wpm" class="badge badge-success"></span>
+                    </div>
+                    <div class="d-flex">
+                        <p>Overall accuracy</p>
+                        <span id="overall-acc" class="badge badge-info"></span>
+                        <div class="progress">
+                            <div id="overall-acc-bar" class="progress-bar bg-info progress-bar-striped progress-bar-animated"></div>
+                        </div>
+                        
+                    </div>
+                    <div class="d-flex">
+                        <p>Recent wpm</p>                     
+                        <span id="recent-wpm" class="badge badge-success"></span>
+                    </div>
+                    <div class="d-flex">
+                        <p>Recent accuracy</p>
+                        <span id="recent-acc" class="badge badge-info"></span>
+                        <div class="progress">
+                            <div id="recent-acc-bar"  class="progress-bar bg-info progress-bar-striped progress-bar-animated"></div>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
 
     </main>
 
@@ -112,7 +324,7 @@
     <script type="text/javascript" src="static/js/word.js"></script>
     <script type="text/javascript" src="static/js/time.js"></script>
     <script type="text/javascript" src="static/js/results.js"></script>
-    <script type="text/javascript" src="static/js/theme.js"></script>
-    <script type="text/javascript" src="static/js/mode.js"></script>
+    <script type="text/javascript" src="static/js/home.js"></script>
+    <script type="text/javascript" src="static/js/account.js"></script>
 </body>
 </html>

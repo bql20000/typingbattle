@@ -1,6 +1,7 @@
 class DefaultConfig(object):
     SQLALCHEMY_TRACK_MODIFICATIONS = False
     SEND_FILE_MAX_AGE_DEFAULT = 0
+    JWT_EXPIRATION_PERIOD = 3600
     DEBUG = False
     TESTING = False
 

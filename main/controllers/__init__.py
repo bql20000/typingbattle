@@ -1,1 +1,1 @@
-from . import words
+from . import word, user, home, result

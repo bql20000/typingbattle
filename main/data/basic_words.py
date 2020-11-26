@@ -12,7 +12,6 @@ from config.dbconfig import read_db_config
 
 
 def insert_word(word_id, value, conn):
-    return
     query = f'INSERT INTO word VALUES(%s, %s)'
     cursor = conn.cursor()
     cursor.execute(query, (word_id, value))

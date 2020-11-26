@@ -1,13 +1,17 @@
-function statisticize() {
+function composeResult() {
     let corrected = document.getElementsByClassName('corrected').length;
     let incorrected = document.getElementsByClassName('incorrected').length;
 
-    let words_per_min = (corrected + incorrected) * 60 / (prev_time_limit - time_limit);
+    let wpm = (corrected + incorrected) * 60 / (prev_time_limit - time_limit);
     let accuracy = (corrected + incorrected > 0) ? (corrected / (corrected + incorrected) * 100) : 100;
 
-    document.getElementById('wpm').innerHTML = `${words_per_min.toFixed(0)}`;
-    document.getElementById('accuracy').innerHTML = `${accuracy.toFixed(1)}%`;
+    return {mode, "time": prev_time_limit, wpm, accuracy};
+}
 
+function statisticize() {
+    let result = composeResult();
+    document.getElementById('wpm').innerHTML = `${result.wpm.toFixed(0)}`;
+    document.getElementById('accuracy').innerHTML = `${result.accuracy.toFixed(1)}%`;
 
     let panel2 = document.getElementById('panel2');
     let typos = Array.from(document.getElementsByClassName('incorrected'));

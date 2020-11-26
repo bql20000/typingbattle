@@ -28,9 +28,6 @@ function pressKey(event, self) {
 
         // change color of words
         words[cur].classList.remove('active-word');
-        console.log(cur_input);
-        console.log(words[cur].innerHTML);
-        console.log(String(cur_input) == String(words[cur].innerHTML));
         if (cur_input == words[cur].innerHTML) {
             words[cur].classList.add('corrected');
         }
