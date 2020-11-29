@@ -1,0 +1,623 @@
+{
+    "next_page": 3,
+    "totalProducts": "29942",
+    "category": "aps",
+    "products": [
+        {
+            "position": {
+                "page": 1,
+                "position": 1,
+                "global_position": 1
+            },
+            "asin": "B07R853R1P",
+            "price": {
+                "discounted": false,
+                "current_price": 19.99,
+                "currency": "USD",
+                "before_price": 0,
+                "savings_amount": 0,
+                "savings_percent": 0
+            },
+            "reviews": {
+                "total_reviews": 278,
+                "rating": 4.6
+            },
+            "url": "https://www.amazon.com/dp/B07R853R1P",
+            "score": "1278.80",
+            "sponsored": false,
+            "amazonChoice": false,
+            "bestSeller": false,
+            "amazonPrime": true,
+            "title": "Macally USB Wired Keyboard and Mouse Combo Bundle - Simple & Easy to Use Ultra Slim Keyboard Mouse Combo - Compatible with...",
+            "thumbnail": "https://m.media-amazon.com/images/I/71Q7g7swkyL._AC_UY218_.jpg"
+        },
+        {
+            "position": {
+                "page": 1,
+                "position": 2,
+                "global_position": 2
+            },
+            "asin": "B082NKBM62",
+            "price": {
+                "discounted": false,
+                "current_price": 0,
+                "currency": "USD",
+                "before_price": 0,
+                "savings_amount": 0,
+                "savings_percent": 0
+            },
+            "reviews": {
+                "total_reviews": 335,
+                "rating": 4.3
+            },
+            "url": "https://www.amazon.com/dp/B082NKBM62",
+            "score": "1440.50",
+            "sponsored": false,
+            "amazonChoice": false,
+            "bestSeller": false,
+            "amazonPrime": true,
+            "title": "HUANUO Keyboard Tray Under Desk，360 Adjustable Ergonomic Sliding Keyboard & Mouse Tray, 25\" W x 9.8\" D, Black",
+            "thumbnail": "https://m.media-amazon.com/images/I/71W4HDjgONL._AC_UY218_.jpg"
+        },
+        {
+            "position": {
+                "page": 1,
+                "position": 3,
+                "global_position": 3
+            },
+            "asin": "B07S92QBCJ",
+            "price": {
+                "discounted": false,
+                "current_price": 99.07,
+                "currency": "USD",
+                "before_price": 0,
+                "savings_amount": 0,
+                "savings_percent": 0
+            },
+            "reviews": {
+                "total_reviews": 3890,
+                "rating": 4.7
+            },
+            "url": "https://www.amazon.com/dp/B07S92QBCJ",
+            "score": "18283.00",
+            "sponsored": false,
+            "amazonChoice": false,
+            "bestSeller": false,
+            "amazonPrime": true,
+            "title": "Logitech MX Keys Advanced Wireless Illuminated Keyboard - Graphite",
+            "thumbnail": "https://m.media-amazon.com/images/I/61PIn5vGm2L._AC_UY218_.jpg"
+        },
+        {
+            "position": {
+                "page": 1,
+                "position": 4,
+                "global_position": 4
+            },
+            "asin": "B085ZQ417L",
+            "price": {
+                "discounted": true,
+                "current_price": 40.79,
+                "currency": "USD",
+                "before_price": 59.99,
+                "savings_amount": 19.2,
+                "savings_percent": 32.01
+            },
+            "reviews": {
+                "total_reviews": 739,
+                "rating": 4.5
+            },
+            "url": "https://www.amazon.com/dp/B085ZQ417L",
+            "score": "3325.50",
+            "sponsored": false,
+            "amazonChoice": false,
+            "bestSeller": false,
+            "amazonPrime": true,
+            "title": "Multi-Device Bluetooth Keyboard and Mouse, Jelly Comb Rechargeable Dual-Mode(Bluetooth 4.0 + USB) Wireless Keyboard and Mo...",
+            "thumbnail": "https://m.media-amazon.com/images/I/61hDdXEkx1L._AC_UY218_.jpg"
+        },
+        {
+            "position": {
+                "page": 1,
+                "position": 5,
+                "global_position": 5
+            },
+            "asin": "B071ZZTNBM",
+            "price": {
+                "discounted": true,
+                "current_price": 119,
+                "currency": "USD",
+                "before_price": 129,
+                "savings_amount": 10,
+                "savings_percent": 7.75
+            },
+            "reviews": {
+                "total_reviews": 5894,
+                "rating": 4.8
+            },
+            "url": "https://www.amazon.com/dp/B071ZZTNBM",
+            "score": "28291.20",
+            "sponsored": false,
+            "amazonChoice": false,
+            "bestSeller": false,
+            "amazonPrime": true,
+            "title": "Apple Magic Keyboard with Numeric Keypad (Wireless, Rechargable) (US English) - Silver",
+            "thumbnail": "https://m.media-amazon.com/images/I/413qDudtmYL._AC_UY218_.jpg"
+        },
+        {
+            "position": {
+                "page": 1,
+                "position": 6,
+                "global_position": 6
+            },
+            "asin": "B002MMY4WY",
+            "price": {
+                "discounted": true,
+                "current_price": 36.99,
+                "currency": "USD",
+                "before_price": 59.99,
+                "savings_amount": 23,
+                "savings_percent": 38.34
+            },
+            "reviews": {
+                "total_reviews": 8045,
+                "rating": 4.6
+            },
+            "url": "https://www.amazon.com/dp/B002MMY4WY",
+            "score": "37007.00",
+            "sponsored": false,
+            "amazonChoice": false,
+            "bestSeller": false,
+            "amazonPrime": true,
+            "title": "Logitech K350 Wireless Wave Keyboard with Unifying Wireless Technology - Black",
+            "thumbnail": "https://m.media-amazon.com/images/I/81pC3gVH3dL._AC_UY218_.jpg"
+        },
+        {
+            "position": {
+                "page": 1,
+                "position": 7,
+                "global_position": 7
+            },
+            "asin": "B08CSH8H33",
+            "price": {
+                "discounted": true,
+                "current_price": 54.99,
+                "currency": "USD",
+                "before_price": 64.99,
+                "savings_amount": 10,
+                "savings_percent": 15.39
+            },
+            "reviews": {
+                "total_reviews": 683,
+                "rating": 4.7
+            },
+            "url": "https://www.amazon.com/dp/B08CSH8H33",
+            "score": "3210.10",
+            "sponsored": false,
+            "amazonChoice": false,
+            "bestSeller": false,
+            "amazonPrime": true,
+            "title": "AUKEY Mechanical Gaming Keyboard with Customizable RGB Backlight & Linear Red Switches, 104-Key Anti-Ghosting Wired Keyboa...",
+            "thumbnail": "https://m.media-amazon.com/images/I/61pQ-ucHrrL._AC_UY218_.jpg"
+        },
+        {
+            "position": {
+                "page": 1,
+                "position": 8,
+                "global_position": 8
+            },
+            "asin": "B079HR85C3",
+            "price": {
+                "discounted": false,
+                "current_price": 0,
+                "currency": "USD",
+                "before_price": 0,
+                "savings_amount": 0,
+                "savings_percent": 0
+            },
+            "reviews": {
+                "total_reviews": 3104,
+                "rating": 4.5
+            },
+            "url": "https://www.amazon.com/dp/B079HR85C3",
+            "score": "13968.00",
+            "sponsored": false,
+            "amazonChoice": false,
+            "bestSeller": false,
+            "amazonPrime": false,
+            "title": "Logitech MK545 Advanced Wireless Keyboard and Mouse Combo",
+            "thumbnail": "https://m.media-amazon.com/images/I/614+PBP1r+L._AC_UY218_.jpg"
+        },
+        {
+            "position": {
+                "page": 1,
+                "position": 9,
+                "global_position": 9
+            },
+            "asin": "B072JX77X6",
+            "price": {
+                "discounted": true,
+                "current_price": 24.99,
+                "currency": "USD",
+                "before_price": 27.99,
+                "savings_amount": 3,
+                "savings_percent": 10.72
+            },
+            "reviews": {
+                "total_reviews": 10636,
+                "rating": 4.4
+            },
+            "url": "https://www.amazon.com/dp/B072JX77X6",
+            "score": "46798.40",
+            "sponsored": false,
+            "amazonChoice": false,
+            "bestSeller": false,
+            "amazonPrime": true,
+            "title": "Logitech MK335 Wireless Keyboard and Mouse Combo - Black/Silver",
+            "thumbnail": "https://m.media-amazon.com/images/I/61VLSqFG6DL._AC_UY218_.jpg"
+        },
+        {
+            "position": {
+                "page": 1,
+                "position": 10,
+                "global_position": 10
+            },
+            "asin": "B06ZYMQYCW",
+            "price": {
+                "discounted": false,
+                "current_price": 49.99,
+                "currency": "USD",
+                "before_price": 0,
+                "savings_amount": 0,
+                "savings_percent": 0
+            },
+            "reviews": {
+                "total_reviews": 3611,
+                "rating": 4.4
+            },
+            "url": "https://www.amazon.com/dp/B06ZYMQYCW",
+            "score": "15888.40",
+            "sponsored": false,
+            "amazonChoice": false,
+            "bestSeller": false,
+            "amazonPrime": true,
+            "title": "Redragon S101 Wired RGB Backlit Gaming Keyboard and Mouse, Gaming Mouse Pad, Gaming Headset Combo All in 1 PC Gamer Bundle...",
+            "thumbnail": "https://m.media-amazon.com/images/I/71EMEQKULsL._AC_UY218_.jpg"
+        },
+        {
+            "position": {
+                "page": 1,
+                "position": 11,
+                "global_position": 11
+            },
+            "asin": "B0871PQ5YY",
+            "price": {
+                "discounted": true,
+                "current_price": 0,
+                "currency": "USD",
+                "before_price": 29.99,
+                "savings_amount": 29.99,
+                "savings_percent": 100
+            },
+            "reviews": {
+                "total_reviews": 668,
+                "rating": 4.6
+            },
+            "url": "https://www.amazon.com/dp/B0871PQ5YY",
+            "score": "3072.80",
+            "sponsored": false,
+            "amazonChoice": false,
+            "bestSeller": false,
+            "amazonPrime": true,
+            "title": "Macally 2.4G USB Wireless Keyboard for Laptop or Computer - Full Size Keyboard with Numeric Keypad & 13 Shortcut Keys - fo...",
+            "thumbnail": "https://m.media-amazon.com/images/I/61RDyl0S-iL._AC_UY218_.jpg"
+        },
+        {
+            "position": {
+                "page": 1,
+                "position": 12,
+                "global_position": 12
+            },
+            "asin": "B07TGPN6P2",
+            "price": {
+                "discounted": false,
+                "current_price": 129.99,
+                "currency": "USD",
+                "before_price": 0,
+                "savings_amount": 0,
+                "savings_percent": 0
+            },
+            "reviews": {
+                "total_reviews": 4292,
+                "rating": 4.7
+            },
+            "url": "https://www.amazon.com/dp/B07TGPN6P2",
+            "score": "20172.40",
+            "sponsored": false,
+            "amazonChoice": false,
+            "bestSeller": false,
+            "amazonPrime": false,
+            "title": "SteelSeries Apex 7 TKL Compact Mechanical Gaming Keyboard – OLED Smart Display – USB Passthrough and Media Controls – Tact...",
+            "thumbnail": "https://m.media-amazon.com/images/I/811-0kItnvL._AC_UY218_.jpg"
+        },
+        {
+            "position": {
+                "page": 1,
+                "position": 13,
+                "global_position": 13
+            },
+            "asin": "B07QS6MG8B",
+            "price": {
+                "discounted": true,
+                "current_price": 47.99,
+                "currency": "USD",
+                "before_price": 79.99,
+                "savings_amount": 32,
+                "savings_percent": 40.01
+            },
+            "reviews": {
+                "total_reviews": 4142,
+                "rating": 4.6
+            },
+            "url": "https://www.amazon.com/dp/B07QS6MG8B",
+            "score": "19053.20",
+            "sponsored": false,
+            "amazonChoice": false,
+            "bestSeller": false,
+            "amazonPrime": true,
+            "title": "Havit Mechanical Keyboard and Mouse Combo RGB Gaming 104 Keys Blue Switches Wired USB Keyboards with Detachable Wrist Rest...",
+            "thumbnail": "https://m.media-amazon.com/images/I/718C8YB4Z2L._AC_UY218_.jpg"
+        },
+        {
+            "position": {
+                "page": 1,
+                "position": 14,
+                "global_position": 14
+            },
+            "asin": "B0876P8VHN",
+            "price": {
+                "discounted": true,
+                "current_price": 37.99,
+                "currency": "USD",
+                "before_price": 39.99,
+                "savings_amount": 2,
+                "savings_percent": 5
+            },
+            "reviews": {
+                "total_reviews": 417,
+                "rating": 4.8
+            },
+            "url": "https://www.amazon.com/dp/B0876P8VHN",
+            "score": "2001.60",
+            "sponsored": false,
+            "amazonChoice": false,
+            "bestSeller": false,
+            "amazonPrime": true,
+            "title": "Logitech K380 Multi-Device Wireless Bluetooth Keyboard for Mac - Rose",
+            "thumbnail": "https://m.media-amazon.com/images/I/71YX+LAibdL._AC_UY218_.jpg"
+        },
+        {
+            "position": {
+                "page": 1,
+                "position": 15,
+                "global_position": 15
+            },
+            "asin": "B07ZWK2TQT",
+            "price": {
+                "discounted": true,
+                "current_price": 0,
+                "currency": "USD",
+                "before_price": 129.99,
+                "savings_amount": 129.99,
+                "savings_percent": 100
+            },
+            "reviews": {
+                "total_reviews": 1715,
+                "rating": 4.7
+            },
+            "url": "https://www.amazon.com/dp/B07ZWK2TQT",
+            "score": "8060.50",
+            "sponsored": false,
+            "amazonChoice": false,
+            "bestSeller": false,
+            "amazonPrime": true,
+            "title": "Logitech Ergo K860 Wireless Ergonomic Keyboard with Wrist Rest - Split Keyboard Layout for Windows/Mac, Bluetooth or USB C...",
+            "thumbnail": "https://m.media-amazon.com/images/I/71qtTeN5y9L._AC_UY218_.jpg"
+        },
+        {
+            "position": {
+                "page": 1,
+                "position": 16,
+                "global_position": 16
+            },
+            "asin": "B0872WG4HG",
+            "price": {
+                "discounted": false,
+                "current_price": 26.99,
+                "currency": "USD",
+                "before_price": 0,
+                "savings_amount": 0,
+                "savings_percent": 0
+            },
+            "reviews": {
+                "total_reviews": 336,
+                "rating": 4.5
+            },
+            "url": "https://www.amazon.com/dp/B0872WG4HG",
+            "score": "1512.00",
+            "sponsored": false,
+            "amazonChoice": false,
+            "bestSeller": false,
+            "amazonPrime": true,
+            "title": "VicTsing RGB Metallic Gaming Keyboard – 104 Bright & Quiet RGB Backlit Keys, Frosted Texture Surface Metal Frame with Mobi...",
+            "thumbnail": "https://m.media-amazon.com/images/I/61mORsLQwHL._AC_UY218_.jpg"
+        },
+        {
+            "position": {
+                "page": 1,
+                "position": 17,
+                "global_position": 17
+            },
+            "asin": "B07QGHK6Q8",
+            "price": {
+                "discounted": true,
+                "current_price": 39.99,
+                "currency": "USD",
+                "before_price": 69.99,
+                "savings_amount": 30,
+                "savings_percent": 42.86
+            },
+            "reviews": {
+                "total_reviews": 572,
+                "rating": 4.6
+            },
+            "url": "https://www.amazon.com/dp/B07QGHK6Q8",
+            "score": "2631.20",
+            "sponsored": false,
+            "amazonChoice": false,
+            "bestSeller": false,
+            "amazonPrime": true,
+            "title": "Logitech G213 Prodigy Gaming Keyboard",
+            "thumbnail": "https://m.media-amazon.com/images/I/71JJb1hlD8L._AC_UY218_.jpg"
+        },
+        {
+            "position": {
+                "page": 1,
+                "position": 18,
+                "global_position": 18
+            },
+            "asin": "B08834ZY6X",
+            "price": {
+                "discounted": false,
+                "current_price": 39.99,
+                "currency": "USD",
+                "before_price": 0,
+                "savings_amount": 0,
+                "savings_percent": 0
+            },
+            "reviews": {
+                "total_reviews": 4296,
+                "rating": 4.6
+            },
+            "url": "https://www.amazon.com/dp/B08834ZY6X",
+            "score": "19761.60",
+            "sponsored": false,
+            "amazonChoice": false,
+            "bestSeller": false,
+            "amazonPrime": true,
+            "title": "Logitech K380 Multi-Device Wireless Bluetooth Keyboard - Rose",
+            "thumbnail": "https://m.media-amazon.com/images/I/61+WA7Sqj0L._AC_UY218_.jpg"
+        },
+        {
+            "position": {
+                "page": 1,
+                "position": 19,
+                "global_position": 19
+            },
+            "asin": "B087QTWCTQ",
+            "price": {
+                "discounted": true,
+                "current_price": 19.99,
+                "currency": "USD",
+                "before_price": 24.99,
+                "savings_amount": 5,
+                "savings_percent": 20.01
+            },
+            "reviews": {
+                "total_reviews": 2342,
+                "rating": 4.7
+            },
+            "url": "https://www.amazon.com/dp/B087QTWCTQ",
+            "score": "11007.40",
+            "sponsored": false,
+            "amazonChoice": false,
+            "bestSeller": false,
+            "amazonPrime": true,
+            "title": "HyperX Pudding Keycaps - Double Shot PBT Keycap Set with Translucent Layer, for Mechanical Keyboards, Full 104 Key Set, OE...",
+            "thumbnail": "https://m.media-amazon.com/images/I/71pJCbRN3XL._AC_UY218_.jpg"
+        },
+        {
+            "position": {
+                "page": 1,
+                "position": 20,
+                "global_position": 20
+            },
+            "asin": "B08HR74WV4",
+            "price": {
+                "discounted": false,
+                "current_price": 0,
+                "currency": "USD",
+                "before_price": 0,
+                "savings_amount": 0,
+                "savings_percent": 0
+            },
+            "reviews": {
+                "total_reviews": 42,
+                "rating": 4.5
+            },
+            "url": "https://www.amazon.com/dp/B08HR74WV4",
+            "score": "189.00",
+            "sponsored": false,
+            "amazonChoice": false,
+            "bestSeller": false,
+            "amazonPrime": false,
+            "title": "Corsair K100 RGB Optical-Mechanical Gaming Keyboard - Corsair OPX RGB Optical-Mechanical Keyswitches - AXON Hyper-Processi...",
+            "thumbnail": "https://m.media-amazon.com/images/I/713siPvPt1L._AC_UY218_.jpg"
+        },
+        {
+            "position": {
+                "page": 1,
+                "position": 21,
+                "global_position": 21
+            },
+            "asin": "B07TMDSS3Q",
+            "price": {
+                "discounted": false,
+                "current_price": 0,
+                "currency": "USD",
+                "before_price": 0,
+                "savings_amount": 0,
+                "savings_percent": 0
+            },
+            "reviews": {
+                "total_reviews": 926,
+                "rating": 4.6
+            },
+            "url": "https://www.amazon.com/dp/B07TMDSS3Q",
+            "score": "4259.60",
+            "sponsored": false,
+            "amazonChoice": false,
+            "bestSeller": false,
+            "amazonPrime": true,
+            "title": "Arteck Solar Wireless Keyboard Full Size Solar Recharging Keyboard for Computer/Desktop/PC/Laptop/Surface/Smart TV and Win...",
+            "thumbnail": "https://m.media-amazon.com/images/I/61HAJfpLB1L._AC_UY218_.jpg"
+        },
+        {
+            "position": {
+                "page": 1,
+                "position": 22,
+                "global_position": 22
+            },
+            "asin": "B07XZP2LV5",
+            "price": {
+                "discounted": false,
+                "current_price": 19.99,
+                "currency": "USD",
+                "before_price": 0,
+                "savings_amount": 0,
+                "savings_percent": 0
+            },
+            "reviews": {
+                "total_reviews": 150,
+                "rating": 3.8
+            },
+            "url": "https://www.amazon.com/dp/B07XZP2LV5",
+            "score": "570.00",
+            "sponsored": false,
+            "amazonChoice": false,
+            "bestSeller": false,
+            "amazonPrime": true,
+            "title": "Meetion Wireless Soft Touch Keyboard and Mice Combo, Computer Keyboard and Wireless Mouse, USB for PC Computer Laptop Wind...",
+            "thumbnail": "https://m.media-amazon.com/images/I/410LmQQg66L._AC_UY218_.jpg"
+        }
+    ]
+}

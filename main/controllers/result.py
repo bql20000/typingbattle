@@ -6,7 +6,6 @@ from main.models.result import ResultModel
 from main.models.user import UserModel
 from main.schemas.result import ResultSchema
 from main.security import requires_auth
-from main.extensions import db
 
 
 @app.route('/results', methods=['POST'])

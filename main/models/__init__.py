@@ -1,1 +1,1 @@
-from . import user, word, result
+from . import product, result, user, word, unit

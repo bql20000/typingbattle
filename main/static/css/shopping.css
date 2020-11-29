@@ -1,0 +1,30 @@
+#sec-shopping > div {
+    width: 100%;
+}
+
+#sec-shopping .card-img-top {
+    padding: auto;
+}
+
+.price {
+    color: #7db921;
+    font-size: 1.2em;
+    text-transform: uppercase;
+    line-height: 1;
+}
+
+#sec-shopping .fa-star {
+    color: #f0715f;
+} 
+
+#sec-shopping .fa-comment-dots {
+    color: #FAF0E6;
+}
+
+.pagination-active {
+    background-color: #00FA9A;
+}
+
+.pagination a:hover {
+    cursor: pointer;
+}

@@ -1,11 +1,14 @@
 body {
+    background-image: url("../img/backgrounds/Ocean.gif");
     background-repeat: no-repeat;
     background-attachment: fixed; 
     background-size: cover;
+    font-family: 'Bubblegum Sans';
 }
 
 .container > div > div {
     width: 55%;
+    margin: auto;
 }
 
 .sec {
@@ -14,10 +17,30 @@ body {
 
 /* Typing section */
 #word-board { 
-    height: 72px;
+    height: 80px;
     margin: auto;
     margin-bottom: 25px;
     overflow: hidden;
+}
+
+.bubbles {
+    position: relative;
+}
+
+.bubbles span {
+    position: relative;
+    font-family: 'Bubblegum Sans';
+    z-index: 2;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.individual-bubble {
+    position: absolute;
+    border-radius: 100%;
+    bottom: 10px;
+    background-color: #fff;
+    z-index: 1;
 }
 
 #typing-area {
@@ -49,20 +72,26 @@ body {
 }
 
 .corrected {
-    color: green;
+    color: green!important;
 }
 
 .incorrected {
-    color:red;
+    color:red!important;
 }
 
 .word {
     margin: 5px;
     display: inline-flex;
+    color: white;
 }
 
 .active-word {
-    background-color: lightgray;
+    /* background-color: #DCDCDC; */
+    border-color: #DCDCDC;
+    border-style: dotted;
+    border-width: 2px;
+    border-radius: 5px;
+    padding: 2px;
 }
 
 #summary {
@@ -110,14 +139,14 @@ body {
 }
 
 /* Account profile */
-.card-img-top {
+#sec-account .card-img-top {
     padding-top: 100%;
     max-width: 128px;
     max-height: 128px;
     border-radius: 3rem;
 }
 
-.card-header {
+#sec-account .card-header {
     background-image: url('/static/img/user-profile-background.jpg');
     background-repeat: no-repeat;
     /* background-attachment: fixed; 
@@ -158,12 +187,3 @@ body {
     width: 100%;
     margin-top: 2px;
 }
-
-
-/* Shopping */
-
-#sec-shopping > div {
-    width: 100%;
-}
-
-

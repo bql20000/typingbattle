@@ -19,9 +19,9 @@ $(document).ready(function () {
 
 
 /* Theme setup */
-var theme = 'No theme';
+var theme = 'Ocean';
 function setBackground(self) {
-    let value = (self.innerHTML == 'No theme') ? 'None' : `url(static/img/${self.innerHTML}.gif)`;
+    let value = `url(static/img/backgrounds/${self.innerHTML}.gif)`;
     $('body').css('background-image', value);
     document.getElementById("theme-button").innerHTML = self.innerHTML;
 }
