@@ -1,5 +1,6 @@
 /* Navigation bar setup */
 $('#navbarResponsive .nav-item').click(function () {
+    $('#navbarResponsive').removeClass('show');
     let cur = $('.active-nav');
     if (cur) {
         cur.removeClass('active-nav');

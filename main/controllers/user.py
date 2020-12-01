@@ -1,10 +1,10 @@
-from flask import jsonify
+from flask import jsonify, request, render_template, current_app
 from werkzeug.exceptions import BadRequest, Unauthorized
 
 from main.app import app
 from main.models.user import UserModel
 from main.schemas.user import UserSchema
-from main.security import encode_jwt
+from main.security import encode_jwt, requires_auth
 from main.extensions import hashing
 from main.helpers import load_request_data
 
@@ -44,3 +44,12 @@ def login(data):
     return jsonify(message='Successfully logged in.',
                    access_token=encode_jwt(user.id),
                    token_type='Bearer'), 200
+
+
+@app.route('/logout', methods=['PUT'])
+@requires_auth
+def logout(user_id):
+    auth_header = request.headers.get('AUTHORIZATION')
+    token_type, access_token = auth_header.split()
+    current_app.config['BLACKLISTED_TOKENS'].append(access_token)
+    return jsonify({}), 200

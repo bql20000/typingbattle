@@ -33,6 +33,8 @@ def requires_auth(func):
                 token_type, access_token = auth_header.split()
             except ValueError:
                 raise BadRequest('Bad authorization header.')
+            if access_token in current_app.config['BLACKLISTED_TOKENS']:
+                raise Unauthorized('Please log in first.')
             if token_type != 'Bearer':
                 raise BadRequest(f'{token_type} token type not supported.')
             user_id = jwt.decode(access_token, current_app.config['SECRET_KEY'])['sub']

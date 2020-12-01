@@ -6,6 +6,10 @@ body {
     font-family: 'Bubblegum Sans';
 }
 
+a {
+    cursor: pointer;
+}
+
 .container > div > div {
     width: 55%;
     margin: auto;
@@ -22,6 +26,8 @@ body {
     margin-bottom: 25px;
     overflow: hidden;
 }
+
+
 
 .bubbles {
     position: relative;
@@ -95,7 +101,7 @@ body {
 }
 
 #summary {
-    max-width: 35%;
+    max-width: 30%;
     margin: auto;
     border-radius: 0;
     min-width: 300px;

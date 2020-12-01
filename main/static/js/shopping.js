@@ -30,6 +30,6 @@ $('.pagination a').on('click', function() {
     $('.pagination a').removeClass('pagination-active');
     $(this).addClass('pagination-active');
     let page = parseInt($(this).text());
-    console.log(page)
     getProducts(page, itemsEachPage);
+    window.scrollTo(0, 500);
 })

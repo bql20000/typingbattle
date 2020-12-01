@@ -7,6 +7,10 @@ $(document).ready(function () {
             login();
         }
     });
+
+    $('#logout-button').click(function () {
+        logout();
+    });
 });
 
 function getUserData() {
@@ -75,6 +79,20 @@ async function login() {
     }
 }
 
+async function logout() {
+    if (!inMemoryToken) return;
+    let response = await fetch('/logout', {
+        method: 'PUT',
+        headers: {
+            'Authorization': `${tokenType} ${inMemoryToken}`
+        },
+        body: JSON.stringify(composeResult())
+    });
+    tokenType = undefined;
+    inMemoryToken = undefined;
+    window.location.reload();
+}
+
 async function register() {
     let response = await fetch('/register', {
         method: 'POST',
@@ -138,3 +156,4 @@ async function getUserStatistic() {
         console.log(jsonResponse.message);
     }
 }
+

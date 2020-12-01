@@ -16,7 +16,7 @@
 <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
         <div class="container">
-          <a class="navbar-brand" href="#">Typing Battle</a>
+          <a class="navbar-brand" onclick="window.location.reload()"><i class="fas fa-keyboard mr-2 fa-lg"></i>Typing Battle<i class="far fa-keyboard ml-2 fa-lg"></i></a>
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
               </button>
@@ -24,13 +24,13 @@
           <div class="collapse navbar-collapse" id="navbarResponsive">
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item active-nav" id="nav-home" name="home">
-                    <a class="nav-link" href="#">Home</a>
+                    <a class="nav-link">Home</a>
                 </li>
                 <li class="nav-item" id="nav-shopping" name="shopping">
-                    <a class="nav-link" href="#">Shopping</a>
+                    <a class="nav-link">Shopping</a>
                 </li>
                 <li class="nav-item" id="nav-account" name="account">
-                    <a class="nav-link" href="#">My account</a>
+                    <a class="nav-link">My account</a>
                 </li>
             </ul>
           </div>
@@ -72,7 +72,7 @@
                 </div>
 
                 <div class="modal-footer d-flex justify-content-center">
-                    <div class="signup-section">Forgot password? <a href="#" class="text-info"> Reset now</a>.</div>
+                    <div class="signup-section">Forgot password? <a class="text-info"> Reset now</a>.</div>
                 </div>
 
             </div>
@@ -99,9 +99,9 @@
                         Mode
                         </button>
                         <div class="dropdown-menu" aria-labelledby="mode-button">
-                            <a class="dropdown-item" href="#" onclick="setMode(this)">White Collar</a>
-                            <a class="dropdown-item" href="#" onclick="setMode(this)">Scientist</a>
-                            <a class="dropdown-item" href="#" onclick="setMode(this)">Psychologist</a>
+                            <a class="dropdown-item" onclick="setMode(this)">White Collar</a>
+                            <a class="dropdown-item" onclick="setMode(this)">Scientist</a>
+                            <a class="dropdown-item" onclick="setMode(this)">Psychologist</a>
                         </div>
                     </div>
                 </div>
@@ -113,12 +113,12 @@
                 <div class="col-md-3 d-flex justify-content-center">
                     <div class="btn-group" role="group">
                         <button id="time-button" type="button" class="btn btn-warning dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        Time (s)
+                          <i class="far fa-clock fa-lg"></i>
                         </button>
                         <div class="dropdown-menu" aria-labelledby="time-button">
-                            <a class="dropdown-item" href="#" onclick="setTime(this)">15</a>
-                            <a class="dropdown-item" href="#" onclick="setTime(this)">30</a>
-                            <a class="dropdown-item" href="#" onclick="setTime(this)">60</a>
+                            <a class="dropdown-item" onclick="setTime(this)">15</a>
+                            <a class="dropdown-item" onclick="setTime(this)">30</a>
+                            <a class="dropdown-item" onclick="setTime(this)">60</a>
                         </div>
                     </div>
                 </div>
@@ -129,11 +129,11 @@
                         Theme
                         </button>
                         <div class="dropdown-menu" aria-labelledby="theme-button">
-                            <a class="dropdown-item" href="#" onclick="setBackground(this)">Covid-19</a>
-                            <a class="dropdown-item" href="#" onclick="setBackground(this)">Snow</a> <!-- jquery or JS ???-->
-                            <a class="dropdown-item" href="#" onclick="setBackground(this)">Rain</a>
-                            <a class="dropdown-item" href="#" onclick="setBackground(this)">Galaxy</a>
-                            <a class="dropdown-item" href="#" onclick="setBackground(this)">Ocean</a>
+                            <a class="dropdown-item" onclick="setBackground(this)">Covid-19</a>
+                            <a class="dropdown-item" onclick="setBackground(this)">Snow</a> <!-- jquery or JS ???-->
+                            <a class="dropdown-item" onclick="setBackground(this)">Rain</a>
+                            <a class="dropdown-item" onclick="setBackground(this)">Galaxy</a>
+                            <a class="dropdown-item" onclick="setBackground(this)">Ocean</a>
                         </div>
                     </div>
                 </div>
@@ -146,10 +146,10 @@
 
                 <!-- Content -->
                 <div class="card-body pb-0 ">
-                    <h4 class="card-title font-weight-bold text-justify text-center">Summary</h4>
-                    <div>
-                        <p class="display-5 ali gn-self-end">Words per minute: <span id="wpm" class="badge badge-success"></span></p>
-                        <p class="display-5 align-self-end">Accuracy: <span id="accuracy" class="badge badge-info"></span></p>
+                    <h3 class="card-title font-weight-bold text-justify text-center">Summary</h3>
+                    <div class="text-center">
+                        <p class="mb-1"><i class="fas fa-keyboard mr-2"></i>Words per minute: <span id="wpm" class="badge badge-success"></span></p>
+                        <p class="mb-1"><i class="fas fa-bullseye mr-2"></i>Accuracy: <span id="accuracy" class="badge badge-info"></span></p>
                     </div>
                 </div>
 
@@ -158,10 +158,10 @@
                     <!-- Nav tabs -->
                     <ul class="nav tabs-white nav-fill" role="tablist">
                         <li class="nav-item ml-0">
-                        <a class="nav-link waves-light font-weight-bold border-bottom border-success active" data-toggle="tab" href="#panel1" aria-selected="true" role="tab">Status</a>
+                        <a class="nav-link waves-light font-weight-bold border-bottom border-success active" data-toggle="tab" href="#panel1" aria-selected="true" role="tab">Status<i class="fas fa-chart-line ml-2 text-danger"></i></a>
                         </li>
                         <li class="nav-item">
-                        <a class="nav-link waves-light font-weight-bold border-bottom border-success" data-toggle="tab" href="#panel2" role="tab">Missed words</a>
+                        <a class="nav-link waves-light font-weight-bold border-bottom border-success" data-toggle="tab" href="#panel2" role="tab">Missed words<i class="fas fa-times-circle ml-2 text-danger"></i></a>
                         </li>
                     </ul>
 
@@ -182,7 +182,6 @@
             </div>
 
         </div>
-      
 
         <div class="sec" id="sec-shopping">
             <div id="carouselIndicators" class="carousel slide mb-5" data-ride="carousel" data-interval="4000">
@@ -212,7 +211,7 @@
                 </a>
             </div>
 
-            <div class="row row-cols-1 row-cols-sm-1 row-cols-md-2 row-cols-lg-3 row-cols-xl-3">
+            <div class="row row-cols-1 row-cols-sm-2 row-cols-md-2 row-cols-lg-3 row-cols-xl-3">
                 <div class="col mb-4">
                   <div class="card">
                     <a href="" class="m-3"> <img src="" class="card-img-top img-fluid" alt="..."> </a>
@@ -380,6 +379,9 @@
                             <div id="recent-acc-bar"  class="progress-bar bg-info progress-bar-striped progress-bar-animated"></div>
                         </div>
                         
+                    </div>
+                    <div id="logout-button" class="d-flex justify-content-center">
+                      <button class="btn btn-danger btn-round">Logout</button>
                     </div>
                 </div>
             </div>
