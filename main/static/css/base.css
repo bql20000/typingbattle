@@ -1,0 +1,26 @@
+body {
+    background-image: url("../img/backgrounds/Ocean.gif");
+    background-repeat: no-repeat;
+    background-attachment: fixed; 
+    background-size: cover;
+    font-family: 'Bubblegum Sans';
+}
+
+a {
+    cursor: pointer;
+}
+
+.container > div > div {
+    width: 55%;
+    margin: auto;
+}
+
+.sec {
+    margin-top: 100px;
+}
+
+/* Navigation bar */
+.active-nav {
+    background-color: darkgray;
+    border-radius: 0.5rem;
+}

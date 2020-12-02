@@ -1,5 +1,5 @@
 """
-Save products information into database to save API calls .
+Save products information into database to save API calls.
 Product information includes: price, rating, url, thumbnail, title, currency
 """
 

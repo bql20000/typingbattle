@@ -1,33 +1,9 @@
-body {
-    background-image: url("../img/backgrounds/Ocean.gif");
-    background-repeat: no-repeat;
-    background-attachment: fixed; 
-    background-size: cover;
-    font-family: 'Bubblegum Sans';
-}
-
-a {
-    cursor: pointer;
-}
-
-.container > div > div {
-    width: 55%;
-    margin: auto;
-}
-
-.sec {
-    margin-top: 100px;
-}
-
-/* Typing section */
 #word-board { 
     height: 80px;
     margin: auto;
     margin-bottom: 25px;
     overflow: hidden;
 }
-
-
 
 .bubbles {
     position: relative;
@@ -114,82 +90,4 @@ a {
 
 .active {
     background-color: lightgray;
-}
-
-/* Login & Register modal */
-@media (min-width: 576px){
-    .modal-dialog {
-        max-width: 444px;
-    }  
-    .modal-content {
-        padding: 1rem;
-    }
-}
-
-
-
-
-
-.form-title {
-    margin: -2rem 0rem 2rem;
-}
-
-.delimiter {
-    padding: 1rem;  
-}
-
-/* Navigation bar */
-.active-nav {
-    background-color: darkgray;
-    border-radius: 0.5rem;
-}
-
-/* Account profile */
-#sec-account .card-img-top {
-    padding-top: 100%;
-    max-width: 128px;
-    max-height: 128px;
-    border-radius: 3rem;
-}
-
-#sec-account .card-header {
-    background-image: url('/static/img/user-profile-background.jpg');
-    background-repeat: no-repeat;
-    /* background-attachment: fixed; 
-    background-size: cover; */
-}
-
-#profile-card {
-    width: 35%;
-    min-width: 300px;
-}
-
-.progress {
-    margin-top: 4px;
-    width: 40%;
-}
-
-#sec-account .card-body p {
-    width: 40%;
-    min-width: 120px;
-}
-
-#sec-account .card-body .badge {
-    margin-top: 4px;    
-    margin-right: 15px;
-    height: 16px;
-}
-
-#username-error-message, #password-error-message {
-    font-size: 0.75rem;
-    color: red;
-}
-
-.form-group-customized {
-    margin-bottom: 0px;
-}
-
-#enroll-buttons button {
-    width: 100%;
-    margin-top: 2px;
 }

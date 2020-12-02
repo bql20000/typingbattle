@@ -11,10 +11,7 @@ from main.extensions import db, hashing
 def create_app():
     app = Flask(__name__)
     CORS(app)
-    try:
-        app.config.from_object(f'config.{app.config["ENV"]}.config')
-    except:
-        raise Exception(f'Unknown environment {app.config["ENV"]}.')
+    app.config.from_object(f'config.{app.config["ENV"]}.config')
     return app
 
 
