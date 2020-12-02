@@ -5,7 +5,7 @@ class ProductModel(db.Model):
     """The product model."""
     __tablename__ = 'product'
     id = db.Column(db.Integer, primary_key=True)
-    title = db.Column(db.String(255))
+    title = db.Column(db.String(255, collation='utf8_unicode_ci'))
     thumbnail = db.Column(db.String(128))
     rating = db.Column(db.Float())
     total_reviews = db.Column(db.Integer())

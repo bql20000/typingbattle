@@ -19,12 +19,9 @@ def insert_word(word_id, value, conn):
 
 
 try:
-    import os
-    print(os.curdir)
     conn = MySQLConnection(**read_db_config(filename='../../config/config.ini'))
-    if conn.is_connected():
-        print('Connection established.')
 
+    print('Saving common english words to database ... ', end='')
     with open('main/data/common-english-words.csv', mode='r') as file:
         reader = csv.reader(file, delimiter=';')
         for row in reader:
@@ -33,5 +30,7 @@ try:
 
     conn.commit()
     conn.close()
+    print('FINISH!')
+
 except Error as e:
     logging.exception(e)

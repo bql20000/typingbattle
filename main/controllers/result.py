@@ -27,8 +27,8 @@ def get_result(user_id):
     time_practiced = sum(r.time for r in results) if results else 0
     overall_wpm = (sum(r.wpm for r in results) / len(results)) if results else 0
     overall_acc = (sum(r.accuracy for r in results) / len(results)) if results else 0
-    recent_wpm = (sum(r.wpm for r in results[:3]) / min(3, len(results))) if results else 0
-    recent_acc = (sum(r.accuracy for r in results[:3]) / min(3, len(results))) if results else 0
+    recent_wpm = results[-1].wpm if results else 0
+    recent_acc = results[-1].accuracy if results else 0
     return jsonify(username=user.username,
                    time_practiced=time_practiced,
                    overall_wpm=overall_wpm,

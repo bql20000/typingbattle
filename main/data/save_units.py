@@ -19,14 +19,14 @@ def insert_word(word_id, value, conn):
 
 try:
     conn = MySQLConnection(**read_db_config(filename='../../config/config.ini'))
-    if conn.is_connected():
-        print('Connection established.')
 
+    print('Saving unit system to database ... ', end='')
     file = open('units.txt', 'r')
     for i, row in enumerate(file, 1):
         insert_word(i, row[:-1], conn)
 
     conn.commit()
     conn.close()
+    print('FINISH!')
 except Error as e:
     logging.exception(e)

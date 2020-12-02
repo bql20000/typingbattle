@@ -23,11 +23,9 @@ def insert_product(product_id, title, thumbnail, rating, total_reviews, url, cur
 
 
 try:
-    import os
     conn = MySQLConnection(**read_db_config(filename='../../config/config.ini'))
-    if conn.is_connected():
-        print('Connection established.')
 
+    print('Saving Amazon products to database ... ', end='')
     for i in range(n_data_files):
         with open(f'./products/amazon-products-{i}.json') as json_file:
             data = json.load(json_file)
@@ -45,5 +43,7 @@ try:
 
     conn.commit()
     conn.close()
+    print('FINISH!')
+
 except Error as e:
     logging.exception(e)
