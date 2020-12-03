@@ -24,7 +24,7 @@ Teck Stack: <br>
 To avoid environmental conflicts, let's set up a virtual environment to run the application
 - Download the virtualenv package:
 > $ pip install virtualenv 
-- Now direct to the root folder of Catalog, creat a new virtual environment with specific python version (here I use python 3.8). You can also change the name of the environment if you want (here I set its name is <code>venv</code>).
+- Now direct to the root folder of Typing Battle, creat a new virtual environment with specific python version (here I use python 3.8). You can also change the name of the environment if you want (here I set its name is <code>venv</code>).
 > $ virtualenv venv --python=python3.8
 - Now activate the environment:
 > $ source venv/bin/activate 
