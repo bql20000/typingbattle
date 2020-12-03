@@ -56,11 +56,11 @@ To do this, look for the <code>config.ini</code> file in the <code>config</code>
 set the attributes of the environment you want to work with. 
 For example, if you are running mysql on a local machine with development environment:
 <br>
-<code>[mysql-development]<br>
-host = localhost<br>
-database = typing_battle_development<br>
-user = root<br>
-password = 123456<br></code>
+<code>[mysql-development]</code> <br>
+<code>host = localhost</code><br>
+<code>database = typing_battle_development</code><br>
+<code>user = root</code><br>
+<code>password = 123456</code><br>
 
 
 #### 6. Some configuration
