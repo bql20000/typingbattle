@@ -1,7 +1,8 @@
+import os
 from configparser import ConfigParser
 
 
-def read_db_config(filename='config/config.ini', section='mysql'):
+def read_db_config(filename='config/config.ini'):
     """ Read database configuration file and return a dictionary object
     :param filename: name of the configuration file
     :param section: section of database configuration
@@ -10,6 +11,10 @@ def read_db_config(filename='config/config.ini', section='mysql'):
     # create parser and read configuration file
     parser = ConfigParser()
     parser.read(filename)
+    env = os.getenv("ENVIRONMENT", "development")
+    section = f'mysql-{env}'
+
+    # print(parser.sections())
 
     # read configuration from mysql section
     if parser.has_section(section):

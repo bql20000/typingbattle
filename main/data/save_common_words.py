@@ -22,7 +22,7 @@ try:
     conn = MySQLConnection(**read_db_config(filename='../../config/config.ini'))
 
     print('Saving common english words to database ... ', end='')
-    with open('main/data/common-english-words.csv', mode='r') as file:
+    with open('common-english-words.csv', mode='r') as file:
         reader = csv.reader(file, delimiter=';')
         for row in reader:
             if row[0]:
