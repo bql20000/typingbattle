@@ -15,7 +15,7 @@ def get_words():
 
     mode = request.args.get('mode')
 
-    if mode is None:
+    if mode is None or mode not in ['basic', 'numerical', 'random'] :
         raise BadRequest('Unknown mode')
 
     if mode == 'basic':

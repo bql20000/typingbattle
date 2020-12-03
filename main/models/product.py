@@ -22,7 +22,6 @@ class ProductModel(db.Model):
         self.price = price
         self.currency = currency
 
-
     def save_to_db(self):
         db.session.add(self)
         db.session.commit()

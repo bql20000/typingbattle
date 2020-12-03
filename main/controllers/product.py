@@ -13,7 +13,7 @@ def get_products():
             - page: the wanted page (default = 1)
             - items_per_page: number of items per page (default = 6)
     """
-    print(app.config['MYSQL_CHARSET'])
+
     page = int(request.args.get('page', 1))
     items_per_page = int(request.args.get('items_per_page', 6))
     products = ProductModel.query.paginate(page, items_per_page)

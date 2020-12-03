@@ -9,3 +9,7 @@ class UnitModel(db.Model):
 
     def __init__(self, value):
         self.value = value
+
+    def save_to_db(self):
+        db.session.add(self)
+        db.session.commit()
