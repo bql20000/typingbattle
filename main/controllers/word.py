@@ -2,6 +2,7 @@ import random
 
 from flask import jsonify, request
 from strgen import StringGenerator
+from werkzeug.exceptions import BadRequest
 
 from main.app import app
 from main.models.word import WordModel
@@ -12,7 +13,10 @@ from main.models.unit import UnitModel
 def get_words():
     """Returns 300 random words based on query's mode."""
 
-    mode = request.args.get('mode', 'basic')
+    mode = request.args.get('mode')
+
+    if mode is None:
+        raise BadRequest('Unknown mode')
 
     if mode == 'basic':
         size = 200

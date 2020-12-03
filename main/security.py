@@ -26,7 +26,7 @@ def requires_auth(func):
     def decorated_func(*args, **kwargs):
         auth_header = request.headers.get('AUTHORIZATION')
         if not auth_header:
-            raise Unauthorized('Please log in first.')
+            raise Unauthorized('Please login first.')
         try:
             # exclude "Bearer " from "Bearer {access_token}"
             try:
@@ -34,14 +34,14 @@ def requires_auth(func):
             except ValueError:
                 raise BadRequest('Bad authorization header.')
             if access_token in current_app.config['BLACKLISTED_TOKENS']:
-                raise Unauthorized('Please log in first.')
+                raise Unauthorized('Please login first.')
             if token_type != 'Bearer':
                 raise BadRequest(f'{token_type} token type not supported.')
             user_id = jwt.decode(access_token, current_app.config['SECRET_KEY'])['sub']
             return func(*args, user_id=user_id, **kwargs)
         except jwt.ExpiredSignatureError:
-            raise Unauthorized('Signature expired. Please log in again.')
+            raise Unauthorized('Signature expired. Please login again.')
         except jwt.InvalidTokenError:
-            raise Unauthorized('Invalid token. Please log in again.')
+            raise Unauthorized('Invalid token. Please login again.')
 
     return decorated_func
