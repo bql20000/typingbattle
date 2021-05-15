@@ -19,10 +19,10 @@ def insert_word(word_id, value, conn):
 
 
 try:
-    conn = MySQLConnection(**read_db_config(filename='../../config/config.ini'))
+    conn = MySQLConnection(**read_db_config(filename='config/config.ini'))
 
     print('Saving common english words to database ... ', end='')
-    with open('common-english-words.csv', mode='r') as file:
+    with open('data/common-english-words.csv', mode='r') as file:
         reader = csv.reader(file, delimiter=';')
         for row in reader:
             if row[0]:

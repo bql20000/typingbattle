@@ -18,10 +18,10 @@ def insert_word(word_id, value, conn):
 
 
 try:
-    conn = MySQLConnection(**read_db_config(filename='../../config/config.ini'))
+    conn = MySQLConnection(**read_db_config(filename='config/config.ini'))
 
     print('Saving unit system to database ... ', end='')
-    file = open('units.txt', 'r')
+    file = open('data/units.txt', 'r')
     for i, row in enumerate(file, 1):
         insert_word(i, row[:-1], conn)
 

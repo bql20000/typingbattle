@@ -3,13 +3,11 @@ Save products information into database to save API calls.
 Product information includes: price, rating, url, thumbnail, title, currency
 """
 
-
 import json
 import logging
 
 from mysql.connector import MySQLConnection, Error
 from config.dbconfig import read_db_config
-
 
 n_data_files = 2
 product_id = 0
@@ -23,11 +21,11 @@ def insert_product(product_id, title, thumbnail, rating, total_reviews, url, cur
 
 
 try:
-    conn = MySQLConnection(**read_db_config(filename='../../config/config.ini'))
+    conn = MySQLConnection(**read_db_config(filename='config/config.ini'))
 
     print('Saving Amazon products to database ... ', end='')
     for i in range(n_data_files):
-        with open(f'./products/amazon-products-{i}.json') as json_file:
+        with open(f'data/products/amazon-products-{i}.json') as json_file:
             data = json.load(json_file)
             products = data['products']
             for item in products:
