@@ -1,3 +1,5 @@
+import logging
+
 from flask import jsonify, request, render_template, current_app
 from werkzeug.exceptions import BadRequest, Unauthorized
 
@@ -21,6 +23,7 @@ def register(data):
     # save user's data & response a successful message
     user = UserModel(**data)
     user.save_to_db()
+    logging.info(f'User {user.username} register successfully.')
     return jsonify(message='Successfully registered.'), 201
 
 
@@ -38,6 +41,7 @@ def login(data):
     ).first()
 
     if user is None:
+        logging.error(f'Wrong username or password: {data["username"]} - {data["password"]}')
         raise Unauthorized('Wrong username or password.')
 
     # generate jwt & response to client

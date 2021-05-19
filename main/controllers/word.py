@@ -1,3 +1,4 @@
+import logging
 import random
 
 from flask import jsonify, request
@@ -15,7 +16,8 @@ def get_words():
 
     mode = request.args.get('mode')
 
-    if mode is None or mode not in ['basic', 'numerical', 'random'] :
+    if mode is None or mode not in ['basic', 'numerical', 'random']:
+        logging.error('Missing "mode" parameter when retrieving random words.')
         raise BadRequest('Unknown mode')
 
     if mode == 'basic':

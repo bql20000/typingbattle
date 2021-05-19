@@ -11,3 +11,6 @@ class Config(object):
     BLACKLISTED_TOKENS = []
     DEBUG = False
     TESTING = False
+
+    LOGGING_FILE = ''
+    LOGGING_LEVEL = 10  # DEBUG
