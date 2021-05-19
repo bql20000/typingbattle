@@ -24,9 +24,10 @@ def register_subpackages():
 def register_extensions():
     """Register the application with needed extensions."""
     logging.basicConfig(
+        filename=app.config['LOGGING_FILE'],
         format='%(asctime)s %(levelname)-5s %(message)s',
         datefmt='%Y-%m-%d %H:%M:%S',
-        level=app.config['LOGGING_SERVICE_LOG_LEVEL'],
+        level=app.config['LOGGING_LEVEL'],
     )
     hashing.init_app(app)
     db.init_app(app)

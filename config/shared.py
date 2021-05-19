@@ -12,4 +12,5 @@ class Config(object):
     DEBUG = False
     TESTING = False
 
-    LOGGING_SERVICE_LOG_LEVEL = 10  # DEBUG
+    LOGGING_FILE = ''
+    LOGGING_LEVEL = 10  # DEBUG
