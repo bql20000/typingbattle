@@ -1,3 +1,5 @@
+import logging
+
 from flask import jsonify
 
 from main.app import app
@@ -15,6 +17,8 @@ def save_result(data, user_id):
     """Create a result record in database"""
     result = ResultModel(**data, user_id=user_id)
     result.save_to_db()
+    user = UserModel.query.get(user_id)
+    logging.info(f'User {user.username} scores {result.wpm} wpm.')
     return jsonify({}), 201
 
 
