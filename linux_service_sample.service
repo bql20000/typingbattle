@@ -3,7 +3,7 @@ Description=uWSGI typing battle
 
 [Service]
 Environment=ENVIRONMENT=development
-ExecStart=/var/www/html/typing-battle/venv/bin/uwsgi --master --emperor /var/www/html/typing-battle/uwsgi.ini --die-on-term --uid azureuser --gid azureuser --logto /var/www/html/typing-battle/log/emperor.log
+ExecStart=/var/www/html/typing-battle/venv/bin/uwsgi --master --emperor /var/www/html/typing-battle/uwsgi.ini --die-on-term --uid azureuser --gid azureuser --logto /var/www/html/typing-battle/logs/emperor.log
 Restart=always
 KillSignal=SIGQUIT
 Type=notify
